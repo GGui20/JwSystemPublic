@@ -114,19 +114,19 @@ public class StudentService extends BaseService {
                 continue;
             }
             XSSFCell cell = (XSSFCell) row.getCell(0);
-            cell.setCellType(XSSFCell.CELL_TYPE_STRING);
+//            cell.setCellType(XSSFCell.CELL_TYPE_STRING);
             String sid = cell.getStringCellValue();
             String sname = row.getCell(1).getStringCellValue();
             /**
              * 转换
              */
             XSSFCell cell2 = (XSSFCell) row.getCell(2);
-            cell2.setCellType(XSSFCell.CELL_TYPE_STRING);
+//            cell2.setCellType(XSSFCell.CELL_TYPE_STRING);
             String password = cell2.getStringCellValue();
             String sex = row.getCell(3).getStringCellValue();
             String scity = row.getCell(4).getStringCellValue();
-            row.getCell(5).setCellType(Cell.CELL_TYPE_STRING);
-            row.getCell(6).setCellType(Cell.CELL_TYPE_STRING);
+//            row.getCell(5).setCellType(Cell.CELL_TYPE_STRING);
+//            row.getCell(6).setCellType(Cell.CELL_TYPE_STRING);
             String phone = row.getCell(5).getStringCellValue();
             String idcard = row.getCell(6).getStringCellValue();
             String address = row.getCell(7).getStringCellValue();
@@ -181,8 +181,8 @@ public class StudentService extends BaseService {
         XSSFSheet sheet = workbook.createSheet(list.getRecords().get(0).getClassname() + "学生信息");
         XSSFCellStyle cellStyle = workbook.createCellStyle();
         cellStyle.setWrapText(true);
-        cellStyle.setAlignment(XSSFCellStyle.ALIGN_CENTER); // 居中
-        cellStyle.setVerticalAlignment(XSSFCellStyle.VERTICAL_CENTER);
+//        cellStyle.setAlignment(XSSFCellStyle.ALIGN_CENTER); // 居中
+//        cellStyle.setVerticalAlignment(XSSFCellStyle.VERTICAL_CENTER);
         // 第一行表头
         XSSFRow headRow = sheet.createRow(0);
         headRow.createCell(0).setCellValue("学号");

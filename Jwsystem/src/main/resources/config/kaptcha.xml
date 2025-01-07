@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Kaptcha 生产器 -->
+    <bean id="defaultKaptcha" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <map>
+                        <!-- 图片宽 -->
+                        <entry key="kaptcha.image.width" value="100"/>
+                        <!-- 图片高 -->
+                        <entry key="kaptcha.image.height" value="40"/>
+                        <!-- 文字颜色 -->
+                        <entry key="kaptcha.textproducer.font.color" value="black"/>
+                        <!-- 字体大小 -->
+                        <entry key="kaptcha.textproducer.font.size" value="32"/>
+                        <!-- 干扰线的颜色 -->
+                        <entry key="kaptcha.noise.color" value="black"/>
+                        <!-- 干扰实现类 -->
+                        <entry key="kaptcha.noise.impl" value="com.google.code.kaptcha.impl.NoNoise"/>
+                        <!-- 文字创作者 -->
+                        <entry key="kaptcha.textproducer.char.string" value="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                        <!-- 文字长度 -->
+                        <entry key="kaptcha.textproducer.char.length" value="4"/>
+                        <!-- 文字字体 -->
+                        <entry key="kaptcha.textproducer.font.names" value="Arial, Courier"/>
+                        <!-- 背景颜色渐变，开始颜色 -->
+                        <entry key="kaptcha.background.clear.from" value="light gray"/>
+                        <!-- 背景颜色渐变，结束颜色 -->
+                        <entry key="kaptcha.background.clear.to" value="white"/>
+                        <!-- session key -->
+                        <entry key="kaptcha.session.key" value="capText"/>
+                    </map>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

@@ -14,6 +14,26 @@
     <artifactId>JwSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+        <!-- 添加Apache POI依赖 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version> <!-- 使用最新的稳定版本 -->
+        </dependency>
+
+        <!-- 如果你需要处理非常大的Excel文件，可以考虑添加SXSSF支持 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>4.1.2</version> <!-- 请根据实际情况选择版本 -->
+        </dependency>
+
+        <!-- 如果你还需要其他POI组件，例如用于处理.xls文件 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version> <!-- 请根据实际情况选择版本 -->
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
