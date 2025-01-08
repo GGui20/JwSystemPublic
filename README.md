@@ -1,6 +1,6 @@
 ## 基于Java+Springboot+Vue的教务管理系统(源代码+数据库)115
 
-后台管理系统，使用的是https://github.com/elunez模板
+后台管理系统，使用的是https://github.com/elunez  模板
 
 ## 一、系统介绍
 本项目前后端分离，本系统分为管理员、教务人员、教师、学生四种角色
