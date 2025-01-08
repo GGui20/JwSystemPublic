@@ -12,6 +12,13 @@ NProgress.configure({showSpinner: false})// NProgress Configuration
 const whiteList = ['/login']// no redirect whitelist
 
 router.beforeEach((to, from, next) => {
+
+  if (to.path === '/') {
+    next() // 直接放行首页
+    return;
+  }
+
+
   if (to.meta.title) {
     document.title = to.meta.title + ' - ' + Config.title
   }
